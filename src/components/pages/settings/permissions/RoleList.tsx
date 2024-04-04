@@ -85,8 +85,9 @@ export const RoleList = observer(
                         <ButtonItem
                             key={role.id}
                             selected={role.id === selected}
-                            style={{ color: role.colour! }}
-                            onClick={() => onSelect?.(role.id)}>
+                            style={{ overflow: 'hidden', color: role.colour! }}
+                            onClick={() => onSelect?.(role.id)}
+                            title={role.name}>
                             <Rank>{role_rank}</Rank>
                             {role.name}
                             {typeof rank === "number" && role_rank <= rank && (
